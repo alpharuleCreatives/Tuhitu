@@ -1,0 +1,25 @@
+/* global.css */
+body {
+    font-family: 'Roboto', sans-serif; /* Default font for the whole project */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Font styles for headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; /* Example: Different font for headings */
+    font-weight: 700; /* Bold for emphasis */
+    color: #333333; /* Adjust color as needed */
+    margin: 0;
+  }
+  
+  /* Font style for paragraphs */
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0;
+  }
+  

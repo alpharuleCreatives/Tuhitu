@@ -1,0 +1,132 @@
+/* Main Section */
+.meetExperts {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9fcfc;
+}
+
+/* Section Title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual Expert Card */
+.card {
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Expert Image */
+.imageWrapper {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #EAFAFF;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Expert Name */
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #416099;
+  margin-bottom: 10px;
+}
+
+/* Specialty */
+.specialty {
+  font-size: 1rem;
+  color: #555555;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Experience */
+.experience {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Reviews */
+.reviews {
+  font-size: 0.9rem;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  color: #fbc02d; /* Gold star color */
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .reviews {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .specialty {
+    font-size: 0.95rem;
+  }
+}

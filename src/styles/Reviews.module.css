@@ -1,0 +1,119 @@
+/* Main Section */
+.reviews {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9fcfc;
+}
+
+/* Section Title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004d4d;
+  margin-bottom: 30px;
+}
+
+/* Review Card */
+.reviewCard {
+  background-color: #e6f7f7;
+  border-radius: 15px;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  font-size: 3rem;
+  color: #cceeee;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+.text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* User Info */
+.userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.userImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #ffffff;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #004d4d;
+}
+
+/* Navigation Buttons */
+.navigation {
+  margin-top: 20px;
+}
+
+.navButton {
+  background-color: #e6f7f7;
+  border: none;
+  color: #008772;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.navButton:hover {
+  background-color: #cceeee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .reviewCard {
+    padding: 30px 15px;
+  }
+
+  .navButton {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+
+  .navButton {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+}
