@@ -31,10 +31,9 @@ const MeetExperts = () => {
 
   return (
     <section className={styles.meetExperts}>
-      <h2 className={styles.title}>Certified Physiotherapists You Can Trust</h2>
+      <h2 className={styles.title}>Certified Physiotherapists You <span className={styles.highlight}>Can Trust</span></h2>
       <p className={styles.subtitle}>
-        Our team comprises certified professionals with extensive experience in
-        providing effective physiotherapy care.
+      Our team includes certified specialists who have extensive experience in elder care.
       </p>
       <div className={styles.grid}>
         {experts.map((expert, index) => (

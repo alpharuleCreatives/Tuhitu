@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Logo from "../assets/images/Group 1171275906.png"
+import Logo from "../assets/images/Group 1171275906.png";
+import Button from "./Button"; // Import the reusable Button component
 import styles from "../styles/Header.module.css";
 
 const Header = () => {
@@ -24,7 +25,13 @@ const Header = () => {
             <a href="#services">Service</a>
           </li>
           <li>
-            <button className={styles.signInButton}>Sign In</button>
+            <Button
+              label="Sign In"
+              variant="serviceProvider"
+              size="medium"
+              onClick={() => alert("Sign In clicked")}
+              className={styles.signInButton}
+            />
           </li>
         </ul>
       </nav>

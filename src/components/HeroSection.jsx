@@ -7,9 +7,9 @@ const HeroSection = () => {
     <section className={styles.hero}>
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <h1>Revolutionizing Home Physiotherapy Care</h1>
+        <h1>Compassionate Physiotherapy Care for Elders at Home</h1>
         <p>
-        Certified therapists, personalized care, all in the comfort of your home.
+        Certified professionals delivering personalized therapy, ensuring comfort, mobility, and independence in your golden years
         </p>
         <div className={styles.buttons}>
           <Button
@@ -17,6 +17,12 @@ const HeroSection = () => {
             variant="primary"
             size="large"
             onClick={() => alert("Get Started")}
+          />
+          <Button
+            label="Become a service provider"
+            variant="serviceProvider" /* Use the new variant */
+            size="large"
+            onClick={() => alert("Become a service provider")}
           />
         </div>
         <div className={styles.pagination}>

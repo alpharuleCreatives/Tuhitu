@@ -1,92 +1,156 @@
-/* Main Section */
 .whyChoose {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #f9fcfc;
+  padding: 80px 20px;
+  background-color: #ffffff;
 }
 
-/* Section Title */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.headerContent {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
 .title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-  color: #004d4d;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0;
 }
 
-/* Cards Container */
-.cards {
+.highlight {
+  color: #00b2b2;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 28px;
+  color: #666666;
+  margin: 16px 0 0;
+}
+
+.content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: stretch;
-  padding: 65px;
-  gap: 60px;
+  width: 48px;
+  height: 48px;
+  background-color: #e6ffff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  color: #00b2b2;
 }
 
-/* Individual Card */
-.card {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.featureTitle {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 4px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.featureDescription {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+  margin: 0;
 }
 
-/* Card Image */
+.imageWrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .image {
-  margin-bottom: 20px;
-}
-
-.image img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  object-fit: cover;
+  display: block;
 }
 
-/* Card Title */
-.cardTitle {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #003F51;
-}
-
-/* Card Description */
-.cardDescription {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+@media (max-width: 1024px) {
+  .whyChoose {
+    padding: 60px 20px;
   }
-
+  
+  .content {
+    gap: 48px;
+  }
+  
   .title {
-    font-size: 1.8rem;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .features {
+    gap: 24px;
+  }
+  
+  .imageWrapper {
+    max-width: 400px;
+    order: -1;
   }
 }
 
 @media (max-width: 480px) {
+  .whyChoose {
+    padding: 40px 16px;
+  }
+  
+  .headerContent {
+    margin-bottom: 32px;
+  }
+  
   .title {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 36px;
   }
-
-  .cardTitle {
-    font-size: 1rem;
+  
+  .subtitle {
+    font-size: 16px;
+    line-height: 24px;
   }
-
-  .cardDescription {
-    font-size: 0.9rem;
+  
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .featureTitle {
+    font-size: 16px;
+  }
+  
+  .featureDescription {
+    font-size: 14px;
+    line-height: 20px;
   }
 }

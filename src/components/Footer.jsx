@@ -1,5 +1,9 @@
 import React from "react";
 import styles from "../styles/Footer.module.css";
+import Logo from "../assets/images/Group 1171275906.png";
+import Linkedin from "../assets/icons/linkedin.png";
+import Facebook from "../assets/icons/facebook.png";
+import Twitter from "../assets/icons/twitter.png";
 
 const Footer = () => {
   return (
@@ -28,7 +32,7 @@ const Footer = () => {
         </div>
 
         {/* Subscribe Section */}
-        <div className={styles.section}>
+        <div className={styles.sectionSubscribe}>
           <h4>Subscribe</h4>
           <form className={styles.subscribeForm}>
             <input
@@ -57,19 +61,29 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <div className={styles.partitionLine}></div>
 
       {/* Bottom Footer */}
       <div className={styles.bottomFooter}>
-        <div className={styles.logo}>tuhitu</div>
+      <div className={styles.logo}>
+        <img src={Logo} alt="Tu Hi Tu Logo" />
+        <span>tuhitu</span>
+      </div>
         <div className={styles.terms}>
           <span>Terms</span>
           <span>Privacy</span>
           <span>Cookies</span>
         </div>
         <div className={styles.socialIcons}>
-          <i className="fab fa-linkedin"></i>
-          <i className="fab fa-facebook"></i>
-          <i className="fab fa-twitter"></i>
+        <div className={styles.socialIconsBox} href="#" target="_blank" rel="noopener noreferrer">
+            <img src={Linkedin} alt="LinkedIn" className={styles.socialIcon} />
+          </div>
+          <div className={styles.socialIconsBox} href="#" target="_blank" rel="noopener noreferrer">
+            <img src={Facebook} alt="Facebook" className={styles.socialIcon} />
+          </div>
+          <div className={styles.socialIconsBox} href="#" target="_blank" rel="noopener noreferrer">
+            <img src={Twitter} alt="Twitter" className={styles.socialIcon} />
+          </div>
         </div>
       </div>
     </footer>

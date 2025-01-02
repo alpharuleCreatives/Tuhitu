@@ -1,45 +1,115 @@
-.about {
+.aboutUsMain {
+  background: linear-gradient(100.66deg, #DEFFFA -64.16%, #EAFAFF 99.54%);
+  padding: 80px 40px;
+  border-radius: 8px;
+  margin: 0 auto;
+ }
+ 
+ .about {
+  max-width: 1280px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
   align-items: center;
-  margin: auto;
-}
-
-.image {
+  justify-content: space-between;
+  gap: 64px;
+  margin: 0 auto;
+ }
+ 
+ .image {
   flex: 1;
-  text-align: center;
-}
-
-.image img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.text {
+  max-width: 600px;
+ }
+ 
+ .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+ }
+ 
+ .text {
   flex: 1;
+  max-width: 600px;
+ }
+ 
+ .text h2 {
+  font-size: 40px;
+  line-height: 48px;
+  color: #1A1A1A;
+  margin-bottom: 24px;
+  font-weight: 400;
+ }
+ 
+ .text p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+  margin-bottom: 32px;
+  width: 100%;
+ }
+ 
+ .aboutUsMainButtons {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-.text h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #004d4d;
-}
-
-.text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #555555;
-}
-
-/* Custom button styling specific to About Us */
-.customButton {
-  width: 135px;
-  align-self: flex-start;
-}
+  gap: 16px;
+  flex-wrap: wrap;
+ }
+ 
+ @media (max-width: 1200px) {
+  .about {
+    max-width: 960px;
+  }
+  
+  .text h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+ }
+ 
+ @media (max-width: 1024px) {
+  .aboutUsMain {
+    padding: 60px 32px;
+  }
+ 
+  .about {
+    gap: 48px;
+  }
+ }
+ 
+ @media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+ 
+  .text {
+    text-align: center;
+  }
+ 
+  .aboutUsMainButtons {
+    justify-content: center;
+  }
+ }
+ 
+ @media (max-width: 480px) {
+  .aboutUsMain {
+    padding: 40px 20px;
+  }
+ 
+  .about {
+    gap: 32px;
+  }
+ 
+  .text h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+ 
+  .text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+ 
+  .aboutUsMainButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+ }

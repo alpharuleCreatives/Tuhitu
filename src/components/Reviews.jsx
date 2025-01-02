@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Reviews.module.css";
-import PriyaImage from "../assets/images/priya-rana.png"; // Replace with the actual image path
+import Quotes from "../assets/images/quote.png"
+import PriyaImage from "../assets/images/priya-rana.png";
 import RahulImage from "../assets/images/rahul-passi.png";
 import AaravImage from "../assets/images/aarav-sharma.png";
 
@@ -39,23 +40,26 @@ const Reviews = () => {
 
   return (
     <section className={styles.reviews}>
-      <h2 className={styles.title}>Hear From Our Happy Clients</h2>
-      <div className={styles.reviewCard}>
-        <div className={styles.quote}>"</div>
-        <p className={styles.text}>{reviews[currentIndex].text}</p>
-        <div className={styles.userInfo}>
-          <img
-            src={reviews[currentIndex].image}
-            alt={reviews[currentIndex].name}
-            className={styles.userImage}
-          />
-          <h4 className={styles.name}>{reviews[currentIndex].name}</h4>
-        </div>
-      </div>
+      <div className={styles.title}>Hear From Our Happy Clients</div>
+      <div className={styles.line}></div>
       <div className={styles.navigation}>
         <button className={styles.navButton} onClick={handlePrev}>
           ❮
         </button>
+        <div className={styles.reviewCard}>
+          <div className={styles.quote}>
+            <img src={Quotes} alt="inverted-commas"/>
+          </div>
+          <p className={styles.text}>{reviews[currentIndex].text}</p>
+          <div className={styles.userInfo}>
+            <img
+              src={reviews[currentIndex].image}
+              alt={reviews[currentIndex].name}
+              className={styles.userImage}
+            />
+            <h4 className={styles.name}>{reviews[currentIndex].name}</h4>
+          </div>
+        </div>
         <button className={styles.navButton} onClick={handleNext}>
           ❯
         </button>

@@ -1,22 +1,91 @@
+/* Base button styles */
 .button {
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ /* Variants */
+ .primary {
+  background-color: #00B3C2;
+  color: #FFFFFF;
+  border: 1px solid #00B3C2;
+  padding: 12px 24px;
+ }
+ 
+ .primary:hover {
+  background-color: #FFFFFF;
+  color: #00B3C2;
+ }
+ 
+ .serviceProvider {
+  background-color: transparent;
+  color: #00B3C2;
+  border: 1px solid #00B3C2;
+  padding: 12px 24px;
+ }
+ 
+ .serviceProvider:hover {
+  background-color: #00B3C2;
+  color: #FFFFFF;
+ }
+ 
+ /* Sizes */
+ .small {
+  font-size: 14px;
+  padding: 8px 16px;
+ }
+ 
+ .medium {
+  font-size: 16px;
+  padding: 12px 24px;
+ }
+ 
+ .large {
+  font-size: 18px;
+  padding: 16px 32px;
+ }
+ 
+ /* Responsive adjustments */
+ @media (max-width: 768px) {
+  .button {
     padding: 10px 20px;
-    transition: background-color 0.3s;
+    font-size: 14px;
+    width: 100%;
   }
   
-  .primary {
-    background-color: #007d7d;
-    color: white;
+  .large {
+    padding: 14px 28px;
+    font-size: 16px;
   }
-  
-  .primary:hover {
-    background-color: #004d4d;
+ }
+ 
+ @media (max-width: 480px) {
+  .button {
+    padding: 8px 16px;
+    font-size: 12px;
   }
-  
-  .medium {
-    font-size: 1rem;
+ 
+  .large {
+    padding: 12px 24px;
+    font-size: 14px;
   }
-  
+ }
+ 
+ /* State styles */
+ .button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+ }
+ 
+ /* Focus styles for accessibility */
+ .button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 179, 194, 0.3);
+ }

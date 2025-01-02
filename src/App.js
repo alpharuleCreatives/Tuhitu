@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import MeetExperts from "./components/MeetExperts";
+import HowItWorks from "./components/HowItWorks";
 import Reviews from "./components/Reviews";
 import BlogResources from "./components/BlogResources";
 import Footer from "./components/Footer";
@@ -18,8 +19,9 @@ const App = () => {
       <Services />
       <WhyChooseUs />
       <MeetExperts />
-      <Reviews />
+      <HowItWorks />
       <BlogResources />
+      <Reviews />
       <Footer />
     </>
   );
