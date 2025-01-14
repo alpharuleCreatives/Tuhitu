@@ -1,0 +1,129 @@
+/* General Section Styling */
+.courses {
+  padding: 4rem 5%;
+  text-align: left;
+  background: #f9f9f9;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.courses h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666666;
+  margin-bottom: 2rem;
+}
+
+/* Carousel Container for Infinite Scrolling */
+.carouselContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/* Carousel Track - Infinite Scroll Animation Applied Here */
+.carouselTrack {
+  display: flex;
+  gap: 1.5rem;
+  animation: infiniteCarousel 20s linear infinite;
+  width: calc(300px * 12); /* Adjust based on the number of cards duplicated */
+}
+
+/* Individual Card Styling */
+.card {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.card:hover {
+  background-color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image Styling */
+.cardImage {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.titlebuttonrating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-button {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Title */
+.title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+/* Book Now Button Styling */
+.bookNow {
+    text-align: left;
+    font-weight: 600;
+    color: #00b3c2;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  
+  .bookNow:hover {
+    color: #007d7d;
+    text-decoration: underline;
+  }
+
+
+/* Rating Styling */
+.rating {
+  font-size: 1.2rem;
+  color: #969696;
+  margin-bottom: 10px;
+}
+
+.star img {
+    font-size: 1.2rem;
+}
+
+
+
+/* ✅ Keyframes for Infinite Scrolling Carousel */
+@keyframes infiniteCarousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .carouselTrack {
+    animation: infiniteCarousel 25s linear infinite;
+  }
+
+  .card {
+    flex: 0 0 280px;
+  }
+}

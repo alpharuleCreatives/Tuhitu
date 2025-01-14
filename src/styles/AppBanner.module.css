@@ -1,0 +1,99 @@
+/* Main Container */
+.bannerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00B2B2;
+    border-radius: 24px;
+    padding: 40px 0px 0px;
+    color: white;
+    max-width: 986px;
+    margin: 60px auto;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Section Styling */
+.imageSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.doctorImage {
+    max-width: 450px; 
+    height: auto;
+    object-fit: cover;
+}
+
+/* Text Section Styling */
+.textSection {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: Nunito;
+
+}
+
+/* Store Buttons Styling */
+.storeButtons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.storeLink img {
+    max-width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.storeLink img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .bannerContainer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .doctorImage {
+        max-width: 250px;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .storeButtons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .bannerContainer {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .doctorImage {
+        max-width: 200px;
+    }
+
+    .storeLink img {
+        max-width: 120px;
+    }
+}

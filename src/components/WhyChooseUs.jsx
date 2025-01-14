@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/WhyChooseUs.module.css";
-import doctorImage from "../assets/images/doctorImage.png";
+import doctorImage from "../assets/images/doctorCheckUp.png";
 
 const WhyChooseUs = () => {
   const features = [

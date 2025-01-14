@@ -1,12 +1,24 @@
+/* Import Montserrat and Poppins from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/* Applying fonts globally */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif; /* ✅ Changed the default body font to Poppins */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Nunito', sans-serif;
 }
 
+/* Heading Styling with Montserrat */
+h1, h2, h3, span {
+  font-family: 'Montserrat', sans-serif; /* ✅ Montserrat for headings */
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Code Styling (Keeping the same for readability) */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

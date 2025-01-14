@@ -1,207 +1,257 @@
+/* Main Container Styling */
 .howItWorks {
-  background-color: #1a1a1a;
+  background-color: #232e2f;
   padding: 80px 20px;
   color: #ffffff;
- }
- 
- .container {
+}
+
+.container {
   max-width: 1280px;
   margin: 0 auto;
- }
- 
- .header {
   text-align: center;
-  margin-bottom: 64px;
- }
- 
- .title {
+}
+
+/* Header Section Styling */
+.heading {
   font-size: 40px;
   line-height: 48px;
   font-weight: 400;
-  margin-bottom: 16px;
- }
- 
- .highlight {
+  color: white;
+}
+
+.highlight {
   color: #00b2b2;
- }
- 
- .subtitle {
-  font-size: 20px;
-  line-height: 28px;
-  color: #ffffff;
-  opacity: 0.9;
- }
- 
- .timeline {
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-top: 8px;
+  color: #e1e1e1;
+}
+
+/* Timeline Styling */
+.timelineContainer {
   position: relative;
-  padding: 60px 0;
-  max-width: 1080px;
-  margin: 0 auto;
- }
- 
- .centerDot {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.timeline {
+  position: relative;
+  width: 70%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.outerlayercenterDot{
   position: absolute;
-  top: 0;
+  top: -50px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 110px;
+  background: #232e2f;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.centerDotthird{
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 85px;
+  background: #00B3C233;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.centerDotsecond{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 65px;
+  background: #00B3C2;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.centerDotone{
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.centerDot {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
   background: #00b2b2;
   border-radius: 50%;
   z-index: 2;
- }
- 
- .dotLine {
+}
+
+.dashedLine {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 4px dashed white;
   z-index: 1;
- }
- 
- .steps {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 80px;
-  padding: 0 40px;
- }
- 
- .step {
+}
+
+.mainContent {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  max-width: 400px;
- }
- 
- .step:nth-child(odd) {
-  justify-self: end;
- }
- 
- .stepNumber {
+  justify-content: center;
+}
+
+/* Steps Section Styling */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 100px 0px 0px;
+  text-align: left;
+}
+
+.step {
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-width: 40px;
-  height: 40px;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.stepCircle {
+  width: 50px;
+  height: 50px;
   background: #00b2b2;
+  color: white;
+  font-weight: bold;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.stepContent {
+  color: white;
+}
+
+.stepTitle {
+  font-size: 20px;
   font-weight: 600;
-  font-size: 20px;
- }
- 
- .stepTitle {
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 500;
- }
- 
- @media (max-width: 1200px) {
-  .timeline {
-    max-width: 900px;
-  }
-  
-  .steps {
-    gap: 60px;
-  }
-  
-  .stepTitle {
-    font-size: 18px;
-    line-height: 26px;
-  }
- }
- 
- @media (max-width: 992px) {
-  .timeline {
-    padding: 40px 0;
-  }
-  
-  .steps {
-    gap: 40px;
-    padding: 0 20px;
-  }
-  
-  .title {
-    font-size: 36px;
-    line-height: 44px;
-  }
- }
- 
- @media (max-width: 768px) {
-  .howItWorks {
-    padding: 60px 16px;
-  }
- 
-  .header {
-    margin-bottom: 40px;
-  }
- 
-  .title {
-    font-size: 32px;
-    line-height: 40px;
-  }
- 
-  .subtitle {
-    font-size: 18px;
-    line-height: 26px;
-  }
- 
-  .timeline {
-    padding: 0;
-  }
- 
+}
+
+.stepDescription {
+  font-size: 16px;
+  color: #bfbfbf;
+}
+
+/* Image Section Styling */
+.imageContainer {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  width: 350px;
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
   .steps {
     grid-template-columns: 1fr;
-    gap: 32px;
+    justify-content: center;
+    text-align: center;
   }
- 
+
   .step {
-    max-width: 100%;
-    align-items: center;
-    justify-self: start;
-  }
- 
-  .step:nth-child(odd) {
-    justify-self: start;
+    flex-direction: column;
     align-items: center;
   }
- 
-  .centerDot {
-    width: 20px;
-    height: 20px;
+
+  .stepCircle {
+    margin-bottom: 10px;
   }
- }
- 
- @media (max-width: 480px) {
-  .howItWorks {
-    padding: 40px 16px;
+
+  .stepTitle {
+    font-size: 18px;
   }
-  
-  .title {
-    font-size: 28px;
-    line-height: 36px;
+}
+
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 32px;
   }
-  
+
   .subtitle {
     font-size: 16px;
-    line-height: 24px;
   }
-  
-  .stepNumber {
-    min-width: 32px;
-    height: 32px;
-    font-size: 16px;
+
+  .timeline {
+    width: 90%;
   }
-  
-  .stepTitle {
-    font-size: 16px;
-    line-height: 24px;
+
+  .stepCircle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
-  
+
   .steps {
-    gap: 24px;
-    padding: 0;
+    gap: 30px;
+    padding: 10px;
   }
- }
+
+  .mainContent {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .howItWorks {
+    padding: 40px 10px;
+  }
+
+  .header h2 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .stepCircle {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .steps {
+    gap: 20px;
+    padding: 10px;
+  }
+  .mainContent {
+    flex-direction: column;
+    align-items: center;
+  }
+}

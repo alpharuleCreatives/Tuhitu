@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router
 import Logo from "../assets/images/Group 1171275906.png";
-import Button from "./Button"; // Import the reusable Button component
+import Button from "./Button"; 
 import styles from "../styles/Header.module.css";
 
 const Header = () => {
@@ -12,17 +13,20 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      {/* ✅ Updated logo to redirect to the landing page */}
+      <Link to="/" className={styles.logo}>
         <img src={Logo} alt="Tu Hi Tu Logo" />
         <span>tuhitu</span>
-      </div>
+      </Link>
+
+      {/* ✅ Updated navigation links for proper routing */}
       <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
         <ul>
           <li>
-            <a href="#about">About Us</a>
+            <Link to="/about-us">About Us</Link> {/* Changed from #about */}
           </li>
           <li>
-            <a href="#services">Service</a>
+            <Link to="/#services">Service</Link> {/* Keeping anchor for services */}
           </li>
           <li>
             <Button
@@ -35,6 +39,8 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+
+      {/* ✅ Mobile menu toggle remains the same */}
       <div className={styles.menuToggle} onClick={toggleMenu}>
         <div className={styles.bar}></div>
         <div className={styles.bar}></div>

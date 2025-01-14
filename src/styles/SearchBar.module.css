@@ -1,0 +1,222 @@
+/* Main Container Styling */
+.searchBarContainer {
+  background: rgba(0, 0, 0, 0); /* Dark semi-transparent background */
+  backdrop-filter: blur(25px);
+  border-radius: 24px;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  max-width: 1100px;
+  border: 2px solid #ffffff;
+  margin: 0 auto;
+}
+
+/* Heading Styling */
+.mainHeading {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.subHeading {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-top: 5px;
+}
+
+/* Icon Styling */
+.icon {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+/* Partition Line */
+.partition {
+  width: 2px;
+  height: 40px;
+  background-color: #d9d9d9;
+}
+
+@media (max-width: 768px) {
+  .partition {
+    display: none;
+  }
+}
+
+/* Search Bar Styling */
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 50px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Select Container Styling */
+.customSelect {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+    .customSelect {
+        width: 0%;
+      }
+}
+
+/* Hide Default Arrow by Using Appearance Property */
+.customSelect select {
+  -webkit-appearance: none; /* Chrome, Safari, Opera */
+  -moz-appearance: none; /* Firefox */
+  appearance: none; /* Standard */
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  padding-right: 35px; /* To avoid text overlapping with the arrow */
+  width: 100%;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  flex: 0.7;
+}
+
+.dropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  color: #555555;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.dropdownList li {
+  padding: 10px;
+  color: #555555;
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdownList li:last-child {
+  border-bottom: none;
+}
+
+.dropdownList li:hover {
+  background: #f0f0f0;
+}
+
+/* Service Dropdown Styling */
+.serviceDropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  position: relative;
+}
+
+.serviceDropdown select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  background: transparent;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Specialist Input Styling */
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Search Button Styling */
+.searchButton {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: #00b2b2;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.searchButton:hover {
+  background: #008a8a;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .searchBar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .searchButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBarContainer {
+    padding: 1.5rem;
+  }
+
+  .heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .heading p {
+    font-size: 0.9rem;
+  }
+
+  .searchBar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown,
+  .serviceDropdown,
+  input[type="text"] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

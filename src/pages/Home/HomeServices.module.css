@@ -1,0 +1,141 @@
+/* Main Services Section */
+.services {
+    text-align: center;
+    padding: 60px 20px;
+}
+  
+/* Header Section */
+.header {
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.headingcard{
+    font-size: 1.7rem;
+    font-family: poppins;
+    font-weight: 700;
+}
+  
+.title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+}
+  
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+  
+/* Grid Styling for Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+  
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 255px;
+}
+
+/* Hover Effect: All Content Becomes White */
+.card:hover {
+    background-color: #00B3C2;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Number Styling */
+.cardNumber {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #00b3c2;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+    font-family: poppins;
+}
+
+.card:hover .cardNumber {
+    color: #ffffff; 
+}
+
+/* List Styling for Descriptions */
+.list {
+    content: "• ";
+    padding: 0;
+    list-style: none;
+    color: #969696;
+    margin-top: 5px;
+}
+
+.list li::before {
+    content: "• ";
+    color: #00b3c2;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.list li {
+    color: #969696;
+    transition: color 0.3s ease;
+}
+
+.card:hover .list li {
+    color: #ffffff; /* List Items Turn White on Hover */
+}
+
+.list li::before {
+    content: "• ";
+    color: #969696; 
+    font-weight: bold;
+}
+
+/* Button Link Styling */
+.serviceLink {
+    color: #00b3c2;
+    font-weight: 600;
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card:hover .serviceLink {
+    color: #ffffff; 
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .content h1 {
+        font-size: 1.4rem;
+        color: #FFFFFF;
+    }
+    .content p {
+        font-size: 1rem;
+    }
+    .card{
+        height: 300px;
+    }
+}
