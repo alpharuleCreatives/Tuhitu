@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         {/* Links Section */}
-        <div className={styles.section}>
+        <div className={styles.sectionLinks}>
           <h4>Links</h4>
           <ul className={styles.list}>
             <li>About Us</li>
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         {/* Explore Section */}
-        <div className={styles.section}>
+        <div className={styles.sectionExplore}>
           <h4>Explore</h4>
           <ul className={styles.list}>
             <li>Resources</li>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         {/* About Us Section */}
-        <div className={styles.section}>
+        <div className={styles.sectionAboutUs}>
           <h4>About Us</h4>
           <p className={styles.aboutText}>
             Tu Hi Tu is dedicated to making professional physiotherapy care

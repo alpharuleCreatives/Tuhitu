@@ -20,8 +20,9 @@
  }
  
  .primary:hover {
-  background-color: #FFFFFF;
-  color: #00B3C2;
+  background-color: #5F2655;
+  color: #FFFFFF;
+  border: 1px solid #5F2655;
  }
  
  .serviceProvider {
@@ -32,7 +33,8 @@
  }
  
  .serviceProvider:hover {
-  background-color: #00B3C2;
+  border: 1px solid #5F2655;
+  background-color: #5F2655;
   color: #FFFFFF;
  }
  

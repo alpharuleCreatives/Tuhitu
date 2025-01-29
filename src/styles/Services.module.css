@@ -50,7 +50,7 @@
 }
 
 .card:hover {
-  background-color: #00B3C2;
+  background-color: #5F2655;
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }

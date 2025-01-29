@@ -9,6 +9,7 @@ import SeniorDedication from "../../components/SeniorDedication";
 import CompassionateCare from "../../assets/images/compassionateCare.png";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import AppBanner from "../../components/AppBanner";
+import RegisterNurseBanner from "../../components/RegisterNurseBanner";
 
 const homeServicesData = [
   {
@@ -97,6 +98,7 @@ const Home = () => {
       <WhyChooseUs />
       <Testimonials />
       <AppBanner />
+      <RegisterNurseBanner />
     </>
   );
 };

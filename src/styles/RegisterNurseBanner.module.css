@@ -1,11 +1,11 @@
 /* Main Container */
-.bannerContainer {
+.nursebannerContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #5F2655;
+    background-color: #45A7AA;
     border-radius: 24px;
-    padding: 40px 0px 0px;
+    padding: 5px 0px 0px;
     color: white;
     max-width: 986px;
     margin: 60px auto;
@@ -14,26 +14,28 @@
 }
 
 /* Image Section Styling */
-.imageSection {
+.nurseimageSection {
     flex: 1;
     display: flex;
     justify-content: center;
+    margin-right: 100px;
 }
 
-.doctorImage {
-    max-width: 450px; 
+.nursedoctorImage {
+    max-width: 400px; 
     height: auto;
     object-fit: cover;
 }
 
 /* Text Section Styling */
-.textSection {
+.nursetextSection {
     flex: 1;
     text-align: left;
     padding: 20px;
+    margin-left: 50px;
 }
 
-.heading {
+.nurseheading {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -42,96 +44,95 @@
 }
 
 /* Store Buttons Styling */
-.storeButtons {
+.nursestoreButtons {
     display: flex;
     gap: 20px;
     margin-top: 20px;
-    margin-bottom: 30px;
 }
 
-.storeLink img {
-    max-width: 150px;
+.nursestoreLink img {
     cursor: pointer;
 }
 
-.storeLink img:hover {
-    transform: scale(1.1);
-}
-
-/* Custom styling for Button */
-.appBannnerButton {
-    font-size: 22px;
-    padding: 12px 30px;
-    background-color: #00B3C2;
+/* Custom styling for Get Started button */
+.nurseGetStartedButton {
+    background-color: #5F2655;
     color: #FFFFFF;
-    border: 1px solid #00B3C2;
+    font-size: 22px;
+    padding: 10px 30px;
     border-radius: 50px;
+    border: 1px solid #5F2655; 
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between text and arrow */
+    gap: 15px; /* Increased spacing between text and arrow */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 /* Hover Effect */
-.appBannnerButton:hover {
-    background-color: #FFFFFF;
-    color: #00B3C2;
+.nurseGetStartedButton:hover {
+    background-color: #FFFFFF; 
+    color: #5F2655;
     border-color: #FFFFFF;
 }
 
 /* Styling for the Arrow Image */
-.arrowLeft {
-    width: 24px; /* Adjust size */
+.arrowIcon {
+    width: 24px; /* Adjust size as needed */
     height: auto;
     transition: filter 0.3s ease-in-out;
+    filter: brightness(0) invert(1); /* Makes arrow white */
 }
 
-/* Change arrow color on hover */
-.appBannnerButton:hover .arrowLeft {
-    filter: brightness(0) saturate(100%) invert(62%) sepia(100%) saturate(269%) hue-rotate(146deg) brightness(92%) contrast(96%);
+/* Change arrow color to #5F2655 on hover */
+.nurseGetStartedButton:hover .arrowIcon {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(14%) saturate(3468%) hue-rotate(292deg) brightness(97%) contrast(86%);
 }
+
+
+
+
 
 /* Responsive Styling */
 @media (max-width: 1024px) {
-    .bannerContainer {
+    .nursebannerContainer {
         flex-direction: column;
         text-align: center;
         padding: 20px;
     }
 
-    .doctorImage {
+    .nursedoctorImage {
         max-width: 250px;
     }
 
-    .heading {
+    .nurseheading {
         font-size: 1.8rem;
     }
 
-    .storeButtons {
+    .nursestoreButtons {
         justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
-    .bannerContainer {
+    .nursebannerContainer {
         padding: 15px;
         width: 80%;
     }
 
-    .heading {
+    .nurseheading {
         font-size: 1.5rem;
     }
 
-    .doctorImage {
+    .nursedoctorImage {
         max-width: 200px;
     }
 
-    .storeLink img {
+    .nursestoreLink img {
         max-width: 120px;
     }
 
-    .appBannnerButton{
+    .nurseGetStartedButton{
         font-size: 16px;
     }
 }
