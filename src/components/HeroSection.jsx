@@ -21,7 +21,6 @@ const HeroSection = ({
     >
       {/* Overlay stays the same */}
       <div className={appliedStyles.overlay}></div>
-      
       <div 
         className={`${appliedStyles.content} ${appliedStyles[contentAlignment]}`}
       >
@@ -44,8 +43,8 @@ const HeroSection = ({
             />
           </div>
         )}
-        {variant === "home" && <SearchBar />}
       </div>
+      {variant === "home" && <SearchBar />}
     </section>
   );
 };

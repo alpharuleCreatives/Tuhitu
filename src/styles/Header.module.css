@@ -3,141 +3,155 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  background: linear-gradient(89.47deg, #FFFFFF -20.77%, #A8E4F7 144.32%);
+  background: linear-gradient(89.47deg, #ffffff -20.77%, #a8e4f7 144.32%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
- }
- 
- .logo {
+}
+
+.logo {
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 24px;
   font-weight: 600;
-  color: #393D46;
- }
- 
- .logo img {
+  color: #393d46;
+}
+
+.logo img {
   height: 40px;
- }
- 
- .nav {
+}
+
+.nav {
   margin-left: auto;
- }
- 
- .nav ul {
+}
+
+.navlist {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 25px;
+  text-align: left;
   list-style: none;
   margin: 0;
   padding: 0;
- }
- 
- .nav li a {
-  text-decoration: none;
-  color: #1A1A1A;
+}
+
+.nav li {
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav li span {
+  color: #1a1a1a;
   font-size: 16px;
   font-weight: 500;
   transition: color 0.3s ease;
- }
- 
- .nav li a:hover {
-  color: #5F2655;
- }
- 
- .signInButton {
-  padding: 12px 32px;
- }
- 
- .menuToggle {
-  display: none;
+}
+
+.nav li span:hover {
+  color: #5f2655;
+}
+
+/* General Dropdown Styling */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 0px 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; 
+  min-width: 200px;
+  opacity: 1;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav li:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown List Items */
+.dropdownMenu li {
+  padding: 6px 10px;
+  border-bottom: 1px solid #5f2655;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Remove border from last item */
+.dropdownMenu li:last-child {
+  border-bottom: none;
+  margin-bottom: 0; /* Ensures last item has no extra spacing */
+}
+
+/* Hover Effect */
+.dropdownMenu li:hover {
+  background: #F3DD6F;
+}
+
+/* Two-Column Layout for Long Dropdowns */
+.dropdownGrid {
+  position: absolute;
+  top: 100%; /* Ensures dropdown opens below header */
+  left: 0;
+  display: flex;
   flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  padding: 4px;
- }
- 
- .bar {
-  width: 24px;
-  height: 2px;
-  background-color: #1A1A1A;
-  transition: 0.3s ease;
- }
- 
- @media (max-width: 1024px) {
-  .nav ul {
-    gap: 32px;
-  }
- }
- 
- @media (max-width: 768px) {
-  .menuToggle {
-    display: flex;
-  }
- 
-  .nav {
-    display: none;
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
- 
-  .nav ul {
-    flex-direction: column;
-    gap: 16px;
+  width: 220px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+/* Show dropdown when hovering */
+.nav li:hover .dropdownGrid {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Individual Columns */
+.dropdownColumn {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: baseline;
+}
+
+/* Customizing Dropdown Items */
+.dropdownMenu a,
+.dropdownGrid a {
+  text-decoration: none;
+  color: #5f2655;
+  font-weight: 500;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .dropdownGrid {
+    grid-template-columns: 1fr;
     width: 100%;
   }
- 
-  .nav li {
+
+  .dropdownMenu {
     width: 100%;
-    text-align: center;
   }
- 
-  .nav li a {
-    display: block;
-    padding: 12px;
-  }
- 
-  .navOpen {
-    display: block;
-  }
- 
-  .signInButton {
-    width: 100%;
-    margin-top: 8px;
-  }
- 
-  /* Hamburger animation */
-  .navOpen + .menuToggle .bar:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
- 
-  .navOpen + .menuToggle .bar:nth-child(2) {
-    opacity: 0;
-  }
- 
-  .navOpen + .menuToggle .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
- }
- 
- @media (max-width: 480px) {
-  .header {
-    padding: 12px 16px;
-  }
- 
-  .logo {
-    font-size: 20px;
-  }
- 
-  .logo img {
-    height: 32px;
-  }
- }
+}

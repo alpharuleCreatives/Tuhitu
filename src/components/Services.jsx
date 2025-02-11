@@ -7,7 +7,6 @@ const Services = ({ servicesData, title, description, isHomePage = false }) => {
   return (
     <SectionContainer backgroundColor="#ffffff">
       <div className={isHomePage ? homeStyles.services : styles.services}>
-        {/* ✅ Dynamic Title and Description */}
         <div className={isHomePage ? homeStyles.header : styles.header}>
           <h2 className={isHomePage ? homeStyles.title : styles.title}>
             {title.split(" ").map((word, index) => {

@@ -4,6 +4,7 @@
   background: url("../../assets/images/HomeImage.png") center/cover no-repeat;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
@@ -47,6 +48,9 @@
 }
 
 @media (max-width: 768px) {
+  .hero{
+    height: auto;
+  }
   .content h1 {
     font-size: 1.6rem;
   }
