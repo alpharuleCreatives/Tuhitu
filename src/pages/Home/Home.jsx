@@ -4,7 +4,7 @@ import Services from "../../components/Services";
 import CoursesSection from "../../components/CoursesSection";
 import HowItWorks from "../../components/HowItWorks";
 import Testimonials from "../../components/Testimonials";
-import HomeImage from "../../assets/images/HomeImage.png";
+import HomeImage from "../../assets/images/tuhitu-herobg.png";
 import SeniorDedication from "../../components/SeniorDedication";
 import CompassionateCare from "../../assets/images/compassionateCare.png";
 import WhyChooseUs from "../../components/WhyChooseUs";

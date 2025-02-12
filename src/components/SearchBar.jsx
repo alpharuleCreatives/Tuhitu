@@ -12,7 +12,7 @@ const SearchBar = () => {
   const [selectedSpecialist, setSelectedSpecialist] = useState("");
 
   const locations = ["Chandigarh", "Mohali", "Panchkula", "Ludhiana", "Jalandhar"];
-  const services = ["Physiotherapy", "Senior Care", "ICU Services"];
+  const services = ["Elder Care at Home", "Patient Care at Home", "ICU Care at Home", "Live-in Care", "Palliative Care at Home", "NRI Family Care","Diagnostics at Home", "ECG at Home", "Holter Test at Home", "Dialysis at Home" ];
 
   // Closes dropdown when clicking outside (for mobile)
   useEffect(() => {
